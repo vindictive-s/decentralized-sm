@@ -164,14 +164,15 @@ function App() {
             borderRadius="15px"
             color="gray"
             display="flex"
-            justifyContent="space-between"
             border="2px solid #c51f5d"
+            width="fit-content"
           >
             <Input
               type="text"
               placeholder="Create new post"
               marginRight="10px"
               borderColor="gray"
+              maxWidth="600px"
             />
             <AiOutlinePlusCircle size="40px" color="gray" />
           </Box>
