@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: hypik;
+  src: url(hypik.otf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: neonfuture;
+  src: url(Neon\ Future.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "hypik", "neonfuture", sans-serif;
+}
+
+img {
+  max-width: none !important;
+  border-radius: 50%;
+}
+
+.app {
+  background: linear-gradient(90deg, rgb(27, 22, 30) 0%, rgb(27, 25, 42) 50%, rgb(9, 6, 16) 100%);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #211c51;
+  border-radius: 5px;
+  margin-inline: 40px;
+  margin-block: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f8f4fd;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2d2a44;
+}
+
+@media (min-width:300px){
+  .content {
+    margin: 20px 40px;
+  }
+}
+
+@media (min-width:1000px){
+  .content {
+    margin: 20px 200px;
+  }
 }
