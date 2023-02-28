@@ -23,7 +23,7 @@ img {
 }
 
 .app {
-  background: linear-gradient(90deg, rgb(27, 22, 30) 0%, rgb(27, 25, 42) 50%, rgb(9, 6, 16) 100%);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 100%);
 }
 
 /* width */
@@ -34,7 +34,7 @@ img {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #211c51;
+  background: rgba(9,1,23,1);
   border-radius: 5px;
   margin-inline: 40px;
   margin-block: 10px;
@@ -42,13 +42,13 @@ img {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #f8f4fd;
+  background: gray;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #2d2a44;
+  background: #3f3f3f;
 }
 
 @media (min-width:300px){

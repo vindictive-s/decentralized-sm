@@ -9,6 +9,7 @@ import LENSHUB from "./lenshub";
 import { ethers } from "ethers";
 import { Box, Button, Image, Input } from "@chakra-ui/react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
+import { BiUserPlus } from "react-icons/bi";
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -112,12 +113,12 @@ function App() {
         display="flex"
         justifyContent="space-between"
         flexDirection="column"
-        color="white"
+        color="black"
         className="content"
       >
         {/* FRIEND SUGGESTIONS */}
         <Box
-          backgroundColor="rgba(9,1,23,1)"
+          backgroundColor="lightgray"
           padding="20px 40px"
           borderRadius="15px"
           overflowX="scroll"
@@ -131,11 +132,12 @@ function App() {
                 margin="10px 20px"
                 display="flex"
                 alignItems="center"
-                height="100px"
+                width="fit-content"
                 padding="5px 10px"
-                _hover={{ color: "#808080", cursor: "pointer" }}
+                fontSize="14px"
+                _hover={{ backgroundColor: "#3f3f3f", cursor: "pointer" }}
                 borderRadius="5px"
-                backgroundColor="#c51f5d"
+                backgroundColor="gray"
               >
                 <img
                   alt="profile"
@@ -159,20 +161,17 @@ function App() {
         <Box>
           <Box
             marginBottom="25px"
-            backgroundColor="rgba(9,1,23,1)"
+            backgroundColor="lightgray"
             padding="20px 40px"
             borderRadius="15px"
             color="gray"
             display="flex"
-            border="2px solid #c51f5d"
-            width="fit-content"
           >
             <Input
               type="text"
               placeholder="Create new post"
               marginRight="10px"
               borderColor="gray"
-              maxWidth="600px"
             />
             <AiOutlinePlusCircle size="40px" color="gray" />
           </Box>
@@ -180,10 +179,9 @@ function App() {
             <Box
               key={post.id}
               marginBottom="25px"
-              backgroundColor="rgba(9,1,23,1)"
+              backgroundColor="lightgray"
               padding="20px 40px"
               borderRadius="15px"
-              border="2px solid #c51f5d"
             >
               <Box display="flex">
                 {/* PROFILE IMAGE */}
@@ -207,11 +205,9 @@ function App() {
                       {post.profile?.handle}
                     </Box>
                     <Box height="50px" _hover={{ cursor: "pointer" }}>
-                      <Image
-                        alt="follow-icon"
-                        src="/follow-icon.png"
-                        width="50px"
-                        height="50px"
+                      <BiUserPlus
+                        size="40px"
+                        color="gray"
                         onClick={() => follow(post.id)}
                       />
                     </Box>
